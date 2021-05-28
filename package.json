@@ -1,0 +1,28 @@
+{
+  "homepage": "http://macsik121.github.io/a_small_chat",
+  "name": "chat-just_trying",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index",
+    "compiling": "npx babel src/App.jsx --out-dir public --watch",
+    "deploy": "gh-pages"
+  },
+  "keywords": [],
+  "author": "Macsik121 <akmaksa65@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "gh-pages": "^3.2.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.25.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0"
+  }
+}

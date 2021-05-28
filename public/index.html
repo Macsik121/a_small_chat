@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Chat</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
+    <style>
+        :root {
+            --base-font-size: 1.25vw;
+            --base-color: #fff;
+        }
+        body {
+            font-size: var(--base-font-size);
+            background-color: #333;
+            color: var(--base-color);
+        }
+        input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea {
+            font-size: var(--base-font-size);
+            color: var(--base-color);
+        }
+        .chat {
+            display: flex;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat .chatting {
+            width: 100%;
+        }
+        .chat .send-message {
+            margin: 0;
+            width: 100%;
+        }
+        .chat .chatBody .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 15px;
+        }
+        .chat .chatBody .msg {
+            display: flex;
+        }
+        .chat .chatBody .msg + .msg {
+            margin-top: 15px;
+        }
+        .chat .chatBody .msg .wrap {
+            width: auto;
+            padding: .5vw 1vw;
+            border-radius: .5vw;
+        }
+        .chat .chatBody .my-msg {
+            justify-content: flex-end;
+        }
+        .chat .chatBody .my-msg .wrap {
+            background-color: rgb(50, 50, 163);
+        }
+        .chat .chatBody .someone-elses-msg .wrap {
+            background-color: rgb(36, 36, 63);
+        }
+        @media (max-width: 750px) {
+            body {
+                font-size: 3.5vw
+            }
+        }
+        @media (max-width: 500px) {
+            body {
+                font-size: 5vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+    <script src="./App.js"></script>
+</body>
+</html>
