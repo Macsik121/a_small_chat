@@ -20,7 +20,19 @@
             background-color: #333;
             color: var(--base-color);
         }
-        input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea {
+        input:not([type]),
+        input[type="text"]:not(.browser-default),
+        input[type="password"]:not(.browser-default),
+        input[type="email"]:not(.browser-default),
+        input[type="url"]:not(.browser-default),
+        input[type="time"]:not(.browser-default),
+        input[type="date"]:not(.browser-default),
+        input[type="datetime"]:not(.browser-default),
+        input[type="datetime-local"]:not(.browser-default),
+        input[type="tel"]:not(.browser-default),
+        input[type="number"]:not(.browser-default),
+        input[type="search"]:not(.browser-default),
+        textarea.materialize-textarea {
             font-size: var(--base-font-size);
             color: var(--base-color);
         }
@@ -42,7 +54,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 0 15px;
+            padding: 2vw 15px 7vw 15px;
         }
         .chat .chatBody .msg {
             display: flex;
@@ -52,14 +64,25 @@
         }
         .chat .chatBody .msg .wrap {
             width: auto;
-            padding: .5vw 1vw;
-            border-radius: .5vw;
+            padding: .43vw 3.5vw .43vw 1vw;
+            border-radius: 1.3vw 1.3vw 0vw 1.3vw;
         }
         .chat .chatBody .my-msg {
             justify-content: flex-end;
+            position: relative;
         }
+
+        .chat .chatBody .my-msg::after {
+            content: "22:36";
+            position: absolute;
+            right: 8px;
+            bottom: 1px;
+            font-size: .9vw;
+            color: #b8b8b8;
+        }
+
         .chat .chatBody .my-msg .wrap {
-            background-color: rgb(50, 50, 163);
+            background-color: #165aaf;
         }
         .chat .chatBody .someone-elses-msg .wrap {
             background-color: rgb(36, 36, 63);
@@ -74,10 +97,23 @@
                 font-size: 5vw;
             }
         }
+
+        .input-field.col.s6.chatting {
+            position: fixed;
+            bottom: 0;
+            background: #393939;
+            z-index: 100;
+            margin: 0;
+
+        }
+        .input-field.col.s6.chatting input {
+            padding: 0 1vw;
+            padding-top: 1vw;
+        }
     </style>
 </head>
 <body>
-    <div id="content"></div>
-    <script src="./App.js"></script>
+<div id="content"></div>
+<script src="./App.js"></script>
 </body>
 </html>
